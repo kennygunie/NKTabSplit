@@ -44,6 +44,16 @@
     
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    // Check if fetchedResultsController is empty
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:0];
+    if([sectionInfo numberOfObjects] > 0)
+    {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 
+                                                    inSection:0];
+        self.detailViewController.detailItem = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    }
 }
 
 - (void)viewDidUnload
@@ -251,17 +261,24 @@
 {
     [self.tableView endUpdates];
     
-    if (_lastSelectedRow > -1) {
-        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:_lastSelectedRow 
-                                                       inSection:0];
-        [self.tableView selectRowAtIndexPath:newIndexPath 
-                                    animated:YES 
-                              scrollPosition:UITableViewScrollPositionNone];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:0];
+    if([sectionInfo numberOfObjects] > 0) {
         
-        self.detailViewController.detailItem = [[self fetchedResultsController] objectAtIndexPath:newIndexPath];
-        _lastSelectedRow = -1;
+        
+        if (_lastSelectedRow > -1) {
+            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:_lastSelectedRow 
+                                                           inSection:0];
+            [self.tableView selectRowAtIndexPath:newIndexPath 
+                                        animated:YES 
+                                  scrollPosition:UITableViewScrollPositionNone];
+            
+            self.detailViewController.detailItem = [[self fetchedResultsController] objectAtIndexPath:newIndexPath];
+            _lastSelectedRow = -1;
+        }
     }
-    
+    else {
+        self.detailViewController.detailItem = nil;
+    }
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
