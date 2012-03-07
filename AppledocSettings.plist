@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--company-id</key>
+	<string>com</string>
+	<key>--ignore</key>
+	<array>
+		<string>Frameworks</string>
+		<string>Tests</string>
+	</array>
+	<key>--logformat</key>
+	<integer>1</integer>
+	<key>--print-settings</key>
+	<true/>
+	<key>--project-company</key>
+	<string>Kenzo</string>
+	<key>--project-name</key>
+	<string>NKTabSplit</string>
+	<key>--repeat-first-par</key>
+	<false/>
+	<key>--templates</key>
+	<string>~/.appledoc</string>
+	<key>--verbose</key>
+	<integer>3</integer>
+</dict>
+</plist>

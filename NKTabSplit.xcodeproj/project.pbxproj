@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		731F6F8B15064646001A82DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731F6F8A15064646001A82DA /* CoreData.framework */; };
+		731F6F8D15064906001A82DA /* NKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D253085C150562E400B1CAAF /* NKDetailViewController.m */; };
+		73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */; };
+		73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */; };
+		D257B26D1505518F001DBDCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26C1505518F001DBDCB /* UIKit.framework */; };
+		D257B26F1505518F001DBDCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26E1505518F001DBDCB /* Foundation.framework */; };
+		D257B2711505518F001DBDCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B2701505518F001DBDCB /* CoreGraphics.framework */; };
+		D257B2771505518F001DBDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D257B2751505518F001DBDCB /* InfoPlist.strings */; };
+		D257B2791505518F001DBDCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B2781505518F001DBDCB /* main.m */; };
+		D257B27D1505518F001DBDCB /* NKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B27C1505518F001DBDCB /* NKAppDelegate.m */; };
+		D257B2801505518F001DBDCB /* NKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B27F1505518F001DBDCB /* NKMasterViewController.m */; };
+		D257B2821505518F001DBDCB /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D257B2811505518F001DBDCB /* first.png */; };
+		D257B2841505518F001DBDCB /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D257B2831505518F001DBDCB /* first@2x.png */; };
+		D257B2871505518F001DBDCB /* NKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B2861505518F001DBDCB /* NKViewController.m */; };
+		D257B2891505518F001DBDCB /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D257B2881505518F001DBDCB /* second.png */; };
+		D257B28B1505518F001DBDCB /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D257B28A1505518F001DBDCB /* second@2x.png */; };
+		D257B28E1505518F001DBDCB /* NKMasterViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */; };
+		D257B2911505518F001DBDCB /* NKMasterViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */; };
+		D257B2941505518F001DBDCB /* NKViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2921505518F001DBDCB /* NKViewController~iphone.xib */; };
+		D257B2971505518F001DBDCB /* NKViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2951505518F001DBDCB /* NKViewController~ipad.xib */; };
+		D257B29F15055190001DBDCB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B29E15055190001DBDCB /* SenTestingKit.framework */; };
+		D257B2A015055190001DBDCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26C1505518F001DBDCB /* UIKit.framework */; };
+		D257B2A115055190001DBDCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26E1505518F001DBDCB /* Foundation.framework */; };
+		D257B2A915055190001DBDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D257B2A715055190001DBDCB /* InfoPlist.strings */; };
+		D257B2AC15055190001DBDCB /* NKTabSplitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B2AB15055190001DBDCB /* NKTabSplitTests.m */; };
+		D257B2BA150551E2001DBDCB /* MainWindow~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2B9150551E2001DBDCB /* MainWindow~iphone.xib */; };
+		D257B2BC1505520C001DBDCB /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2BB1505520C001DBDCB /* MainWindow~ipad.xib */; };
+		D2CDF97E1506F1FF00E9326F /* NKData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2CDF97C1506F1FF00E9326F /* NKData.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D257B2A215055190001DBDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D257B25F1505518F001DBDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D257B2671505518F001DBDCB;
+			remoteInfo = Template;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		731F6F8A15064646001A82DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D253085B150562E400B1CAAF /* NKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDetailViewController.h; sourceTree = "<group>"; };
+		D253085C150562E400B1CAAF /* NKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDetailViewController.m; sourceTree = "<group>"; };
+		D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~iphone.xib"; sourceTree = "<group>"; };
+		D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~ipad.xib"; sourceTree = "<group>"; };
+		D257B2681505518F001DBDCB /* NKTabSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKTabSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D257B26C1505518F001DBDCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D257B26E1505518F001DBDCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D257B2701505518F001DBDCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D257B2741505518F001DBDCB /* NKTabSplit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NKTabSplit-Info.plist"; sourceTree = "<group>"; };
+		D257B2761505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D257B2781505518F001DBDCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D257B27A1505518F001DBDCB /* NKTabSplit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NKTabSplit-Prefix.pch"; sourceTree = "<group>"; };
+		D257B27B1505518F001DBDCB /* NKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKAppDelegate.h; sourceTree = "<group>"; };
+		D257B27C1505518F001DBDCB /* NKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAppDelegate.m; sourceTree = "<group>"; };
+		D257B27E1505518F001DBDCB /* NKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKMasterViewController.h; sourceTree = "<group>"; };
+		D257B27F1505518F001DBDCB /* NKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKMasterViewController.m; sourceTree = "<group>"; };
+		D257B2811505518F001DBDCB /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		D257B2831505518F001DBDCB /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		D257B2851505518F001DBDCB /* NKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKViewController.h; sourceTree = "<group>"; };
+		D257B2861505518F001DBDCB /* NKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKViewController.m; sourceTree = "<group>"; };
+		D257B2881505518F001DBDCB /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		D257B28A1505518F001DBDCB /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		D257B28D1505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKMasterViewController~iphone.xib"; sourceTree = "<group>"; };
+		D257B2901505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKMasterViewController~ipad.xib"; sourceTree = "<group>"; };
+		D257B2931505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKViewController~iphone.xib"; sourceTree = "<group>"; };
+		D257B2961505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKViewController~ipad.xib"; sourceTree = "<group>"; };
+		D257B29D15055190001DBDCB /* NKTabSplitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKTabSplitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D257B29E15055190001DBDCB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D257B2A615055190001DBDCB /* NKTabSplitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NKTabSplitTests-Info.plist"; sourceTree = "<group>"; };
+		D257B2A815055190001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D257B2AA15055190001DBDCB /* NKTabSplitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTabSplitTests.h; sourceTree = "<group>"; };
+		D257B2AB15055190001DBDCB /* NKTabSplitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTabSplitTests.m; sourceTree = "<group>"; };
+		D257B2B9150551E2001DBDCB /* MainWindow~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainWindow~iphone.xib"; sourceTree = "<group>"; };
+		D257B2BB1505520C001DBDCB /* MainWindow~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainWindow~ipad.xib"; sourceTree = "<group>"; };
+		D2CDF97D1506F1FF00E9326F /* NKData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NKData.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D257B2651505518F001DBDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731F6F8B15064646001A82DA /* CoreData.framework in Frameworks */,
+				D257B26D1505518F001DBDCB /* UIKit.framework in Frameworks */,
+				D257B26F1505518F001DBDCB /* Foundation.framework in Frameworks */,
+				D257B2711505518F001DBDCB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D257B29915055190001DBDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D257B29F15055190001DBDCB /* SenTestingKit.framework in Frameworks */,
+				D257B2A015055190001DBDCB /* UIKit.framework in Frameworks */,
+				D257B2A115055190001DBDCB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D257B25D1505518F001DBDCB = {
+			isa = PBXGroup;
+			children = (
+				D257B2721505518F001DBDCB /* Project */,
+				D257B2A415055190001DBDCB /* Tests */,
+				D257B26B1505518F001DBDCB /* Frameworks */,
+				D257B2691505518F001DBDCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D257B2691505518F001DBDCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D257B2681505518F001DBDCB /* NKTabSplit.app */,
+				D257B29D15055190001DBDCB /* NKTabSplitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D257B26B1505518F001DBDCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				731F6F8A15064646001A82DA /* CoreData.framework */,
+				D257B26C1505518F001DBDCB /* UIKit.framework */,
+				D257B26E1505518F001DBDCB /* Foundation.framework */,
+				D257B2701505518F001DBDCB /* CoreGraphics.framework */,
+				D257B29E15055190001DBDCB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D257B2721505518F001DBDCB /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				D257B27B1505518F001DBDCB /* NKAppDelegate.h */,
+				D257B27C1505518F001DBDCB /* NKAppDelegate.m */,
+				D257B27E1505518F001DBDCB /* NKMasterViewController.h */,
+				D257B27F1505518F001DBDCB /* NKMasterViewController.m */,
+				D253085B150562E400B1CAAF /* NKDetailViewController.h */,
+				D253085C150562E400B1CAAF /* NKDetailViewController.m */,
+				D257B2851505518F001DBDCB /* NKViewController.h */,
+				D257B2861505518F001DBDCB /* NKViewController.m */,
+				D257B2811505518F001DBDCB /* first.png */,
+				D257B2831505518F001DBDCB /* first@2x.png */,
+				D257B2881505518F001DBDCB /* second.png */,
+				D257B28A1505518F001DBDCB /* second@2x.png */,
+				D257B2B9150551E2001DBDCB /* MainWindow~iphone.xib */,
+				D257B2BB1505520C001DBDCB /* MainWindow~ipad.xib */,
+				D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */,
+				D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */,
+				D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */,
+				D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */,
+				D257B2921505518F001DBDCB /* NKViewController~iphone.xib */,
+				D257B2951505518F001DBDCB /* NKViewController~ipad.xib */,
+				D257B2731505518F001DBDCB /* Supporting Files */,
+				D2CDF97C1506F1FF00E9326F /* NKData.xcdatamodeld */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		D257B2731505518F001DBDCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D257B2741505518F001DBDCB /* NKTabSplit-Info.plist */,
+				D257B2751505518F001DBDCB /* InfoPlist.strings */,
+				D257B2781505518F001DBDCB /* main.m */,
+				D257B27A1505518F001DBDCB /* NKTabSplit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D257B2A415055190001DBDCB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D257B2AA15055190001DBDCB /* NKTabSplitTests.h */,
+				D257B2AB15055190001DBDCB /* NKTabSplitTests.m */,
+				D257B2A515055190001DBDCB /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D257B2A515055190001DBDCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D257B2A615055190001DBDCB /* NKTabSplitTests-Info.plist */,
+				D257B2A715055190001DBDCB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D257B2671505518F001DBDCB /* NKTabSplit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D257B2AF15055190001DBDCB /* Build configuration list for PBXNativeTarget "NKTabSplit" */;
+			buildPhases = (
+				D257B2641505518F001DBDCB /* Sources */,
+				D257B2651505518F001DBDCB /* Frameworks */,
+				D257B2661505518F001DBDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NKTabSplit;
+			productName = Template;
+			productReference = D257B2681505518F001DBDCB /* NKTabSplit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D257B29C15055190001DBDCB /* NKTabSplitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D257B2B215055190001DBDCB /* Build configuration list for PBXNativeTarget "NKTabSplitTests" */;
+			buildPhases = (
+				D257B29815055190001DBDCB /* Sources */,
+				D257B29915055190001DBDCB /* Frameworks */,
+				D257B29A15055190001DBDCB /* Resources */,
+				D257B29B15055190001DBDCB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D257B2A315055190001DBDCB /* PBXTargetDependency */,
+			);
+			name = NKTabSplitTests;
+			productName = TemplateTests;
+			productReference = D257B29D15055190001DBDCB /* NKTabSplitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D257B25F1505518F001DBDCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NK;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = KNG;
+			};
+			buildConfigurationList = D257B2621505518F001DBDCB /* Build configuration list for PBXProject "NKTabSplit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D257B25D1505518F001DBDCB;
+			productRefGroup = D257B2691505518F001DBDCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D257B2671505518F001DBDCB /* NKTabSplit */,
+				D257B29C15055190001DBDCB /* NKTabSplitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D257B2661505518F001DBDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D257B2771505518F001DBDCB /* InfoPlist.strings in Resources */,
+				D257B2821505518F001DBDCB /* first.png in Resources */,
+				D257B2841505518F001DBDCB /* first@2x.png in Resources */,
+				D257B2891505518F001DBDCB /* second.png in Resources */,
+				D257B28B1505518F001DBDCB /* second@2x.png in Resources */,
+				D257B28E1505518F001DBDCB /* NKMasterViewController~iphone.xib in Resources */,
+				D257B2911505518F001DBDCB /* NKMasterViewController~ipad.xib in Resources */,
+				D257B2941505518F001DBDCB /* NKViewController~iphone.xib in Resources */,
+				D257B2971505518F001DBDCB /* NKViewController~ipad.xib in Resources */,
+				D257B2BA150551E2001DBDCB /* MainWindow~iphone.xib in Resources */,
+				D257B2BC1505520C001DBDCB /* MainWindow~ipad.xib in Resources */,
+				73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */,
+				73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D257B29A15055190001DBDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D257B2A915055190001DBDCB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D257B29B15055190001DBDCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D257B2641505518F001DBDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D257B2791505518F001DBDCB /* main.m in Sources */,
+				D257B27D1505518F001DBDCB /* NKAppDelegate.m in Sources */,
+				D257B2801505518F001DBDCB /* NKMasterViewController.m in Sources */,
+				D257B2871505518F001DBDCB /* NKViewController.m in Sources */,
+				731F6F8D15064906001A82DA /* NKDetailViewController.m in Sources */,
+				D2CDF97E1506F1FF00E9326F /* NKData.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D257B29815055190001DBDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D257B2AC15055190001DBDCB /* NKTabSplitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D257B2A315055190001DBDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D257B2671505518F001DBDCB /* NKTabSplit */;
+			targetProxy = D257B2A215055190001DBDCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D257B2751505518F001DBDCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B2761505518F001DBDCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B28D1505518F001DBDCB /* en */,
+			);
+			name = "NKMasterViewController~iphone.xib";
+			sourceTree = "<group>";
+		};
+		D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B2901505518F001DBDCB /* en */,
+			);
+			name = "NKMasterViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		D257B2921505518F001DBDCB /* NKViewController~iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B2931505518F001DBDCB /* en */,
+			);
+			name = "NKViewController~iphone.xib";
+			sourceTree = "<group>";
+		};
+		D257B2951505518F001DBDCB /* NKViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B2961505518F001DBDCB /* en */,
+			);
+			name = "NKViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		D257B2A715055190001DBDCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D257B2A815055190001DBDCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D257B2AD15055190001DBDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D257B2AE15055190001DBDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D257B2B015055190001DBDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project/NKTabSplit-Prefix.pch";
+				INFOPLIST_FILE = "Project/NKTabSplit-Info.plist";
+				PRODUCT_NAME = NKTabSplit;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D257B2B115055190001DBDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project/NKTabSplit-Prefix.pch";
+				INFOPLIST_FILE = "Project/NKTabSplit-Info.plist";
+				PRODUCT_NAME = NKTabSplit;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D257B2B315055190001DBDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NKTabSplit.app/NKTabSplit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project/NKTabSplit-Prefix.pch";
+				INFOPLIST_FILE = "Tests/NKTabSplitTests-Info.plist";
+				PRODUCT_NAME = NKTabSplitTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D257B2B415055190001DBDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NKTabSplit.app/NKTabSplit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project/NKTabSplit-Prefix.pch";
+				INFOPLIST_FILE = "Tests/NKTabSplitTests-Info.plist";
+				PRODUCT_NAME = NKTabSplitTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D257B2621505518F001DBDCB /* Build configuration list for PBXProject "NKTabSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D257B2AD15055190001DBDCB /* Debug */,
+				D257B2AE15055190001DBDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D257B2AF15055190001DBDCB /* Build configuration list for PBXNativeTarget "NKTabSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D257B2B015055190001DBDCB /* Debug */,
+				D257B2B115055190001DBDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D257B2B215055190001DBDCB /* Build configuration list for PBXNativeTarget "NKTabSplitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D257B2B315055190001DBDCB /* Debug */,
+				D257B2B415055190001DBDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2CDF97C1506F1FF00E9326F /* NKData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2CDF97D1506F1FF00E9326F /* NKData.xcdatamodel */,
+			);
+			currentVersion = D2CDF97D1506F1FF00E9326F /* NKData.xcdatamodel */;
+			path = NKData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D257B25F1505518F001DBDCB /* Project object */;
+}
