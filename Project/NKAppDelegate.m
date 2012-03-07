@@ -49,14 +49,13 @@
         
         // Tab 1
         _viewControllerA.detailViewController = _detailViewControllerA;
-        _splitViewControllerA.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A" 
-                                                                          image:[UIImage imageNamed:@"first.png"] 
+        _splitViewControllerA.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A"
+                                                                          image:[UIImage imageNamed:@"airplane.png"] 
                                                                             tag:0] autorelease];
-        
         // Tab 2
         NKViewController *second = [[NKViewController new] autorelease];
         second.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"B" 
-                                                           image:[UIImage imageNamed:@"second.png"] 
+                                                           image:[UIImage imageNamed:@"radio.png"] 
                                                              tag:1] autorelease];
         
         // All tabs
