@@ -8,6 +8,7 @@
 	<array>
 		<string>Frameworks</string>
 		<string>Tests</string>
+		<string>Images</string>
 	</array>
 	<key>--logformat</key>
 	<integer>1</integer>
