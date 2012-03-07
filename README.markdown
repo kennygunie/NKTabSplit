@@ -1,8 +1,8 @@
-**Template for iOS Universal App**
+#Template for iOS Universal App
 
-Support:
+###Support:
 
 - UISplitViewController 
 - UITabBarController
 - Coredata
-- Icons from [PixelPress](http://www.pixelpressicons.com/?p=108)
+- Tabbar icons from [PixelPress](http://www.pixelpressicons.com/?p=108)
