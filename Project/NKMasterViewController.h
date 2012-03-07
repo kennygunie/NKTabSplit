@@ -10,15 +10,15 @@
 #import <CoreData/CoreData.h>
 @class NKDetailViewController;
 
-/**
- Master view
- */
+/** Master view */
 @interface NKMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-
+/** (Just for iPad) Detail view controller */
 @property (strong, nonatomic) NKDetailViewController *detailViewController;
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+/** @name Coredata */
+/** Store the object context from AppDelegate */
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+/** Fetched datas */
+@property (readonly, strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end

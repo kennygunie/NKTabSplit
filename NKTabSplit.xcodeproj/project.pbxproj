@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		731F6F8B15064646001A82DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731F6F8A15064646001A82DA /* CoreData.framework */; };
 		731F6F8D15064906001A82DA /* NKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D253085C150562E400B1CAAF /* NKDetailViewController.m */; };
+		737B4CE41507A283001928AB /* AppledocSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 737B4CE31507A283001928AB /* AppledocSettings.plist */; };
 		73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */; };
 		73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */; };
 		D257B26D1505518F001DBDCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26C1505518F001DBDCB /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		731F6F8A15064646001A82DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		737B4CE31507A283001928AB /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = SOURCE_ROOT; };
 		D253085B150562E400B1CAAF /* NKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDetailViewController.h; sourceTree = "<group>"; };
 		D253085C150562E400B1CAAF /* NKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDetailViewController.m; sourceTree = "<group>"; };
 		D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~iphone.xib"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		D257B2731505518F001DBDCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				737B4CE31507A283001928AB /* AppledocSettings.plist */,
 				D257B2741505518F001DBDCB /* NKTabSplit-Info.plist */,
 				D257B2751505518F001DBDCB /* InfoPlist.strings */,
 				D257B2781505518F001DBDCB /* main.m */,
@@ -286,6 +289,7 @@
 				D257B2BC1505520C001DBDCB /* MainWindow~ipad.xib in Resources */,
 				73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */,
 				73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */,
+				737B4CE41507A283001928AB /* AppledocSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- Detail view
- */
+/** Detail view */
 @interface NKDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
+/** Detail data */
 @property (strong, nonatomic) id detailItem;
 
+/** Detail label */
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end

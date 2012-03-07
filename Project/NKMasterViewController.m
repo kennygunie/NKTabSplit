@@ -22,6 +22,9 @@
 #pragma mark - Object lifecycle
 - (void)dealloc
 {
+    [_fetchedResultsController release];
+    [_managedObjectContext release];
+    [_detailViewController release];
     [super dealloc];
 }
 
@@ -46,6 +49,10 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    self.managedObjectContext = nil;
+    self.detailViewController = nil;
+    [_fetchedResultsController release];
+    _fetchedResultsController = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -166,9 +173,12 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"] autorelease];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
+    [_fetchedResultsController release];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+                                                                    managedObjectContext:self.managedObjectContext 
+                                                                      sectionNameKeyPath:nil 
+                                                                               cacheName:@"Master"];
+    _fetchedResultsController.delegate = self;
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {

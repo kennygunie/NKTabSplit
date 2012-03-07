@@ -24,13 +24,19 @@
 
 @synthesize viewControllerA = _viewControllerA;
 @synthesize detailViewControllerA = _detailViewControllerA;
+@synthesize splitViewControllerA = _splitViewControllerA;
 
 @synthesize tabBarController = _tabBarController;
-@synthesize splitViewControllerA = _splitViewControllerA;
 
 - (void)dealloc
 {
     [_window release];
+    [_managedObjectContext release];
+    [_managedObjectModel release];
+    [_persistentStoreCoordinator release];
+    [_viewControllerA release];
+    [_detailViewControllerA release];
+    [_splitViewControllerA release];
     [super dealloc];
 }
 

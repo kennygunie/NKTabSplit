@@ -12,46 +12,32 @@
 @class NKDetailViewController;
 
 
-/**
- Application delegate
- */
+/** Application delegate */
 @interface NKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 
 
-/**
- @name Views
- */
-
-/**
- Main window
- */
+/** @name Views */
+/** Main window */
 @property (strong, nonatomic) IBOutlet UIWindow *window;
-
+/** Master View A */
 @property (strong, nonatomic) IBOutlet NKMasterViewController *viewControllerA;
+/** Detail View A */
 @property (strong, nonatomic) IBOutlet NKDetailViewController *detailViewControllerA;
+/** Split View A */
 @property (strong, nonatomic) IBOutlet UISplitViewController *splitViewControllerA;
 
-/**
- Tab bar controller
- */
+/** Tab bar controller */
 @property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
 
-/**
- @name Coredata
- */
+/** @name Coredata */
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-/**
- Save data
- */
+/** Save data */
 - (void)saveContext;
 
-/**
- @name Utils
- */
-
+/** @name Utils */
 - (NSURL *)applicationDocumentsDirectory;
 @end
