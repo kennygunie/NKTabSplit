@@ -15,7 +15,7 @@
 
 /** (Just for iPad) Detail view controller */
 @property (strong, nonatomic) NKDetailViewController *detailViewController;
-
+@property NSInteger lastSelectedRow;
 /** @name Coredata */
 /** Store the object context from AppDelegate */
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

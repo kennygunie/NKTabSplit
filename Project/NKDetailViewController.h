@@ -17,4 +17,6 @@
 /** Detail label */
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+- (void)hidePopOver;
+
 @end

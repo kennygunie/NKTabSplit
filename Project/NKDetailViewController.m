@@ -38,16 +38,18 @@
         // Update the view.
         [self configureView];
     }
+}
 
+- (void)hidePopOver
+{
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
     }

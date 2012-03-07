@@ -18,7 +18,8 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize detailViewController = _detailViewController;
-	
+@synthesize lastSelectedRow = _lastSelectedRow;
+
 #pragma mark - Object lifecycle
 - (void)dealloc
 {
@@ -143,6 +144,7 @@
         [self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
         self.detailViewController.detailItem = selectedObject;
+        [self.detailViewController hidePopOver];
     }
 }
 
@@ -225,7 +227,13 @@
             break;
             
         case NSFetchedResultsChangeDelete:
+            
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            _lastSelectedRow = indexPath.row;
+            id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:0];
+            if (_lastSelectedRow == [sectionInfo numberOfObjects]) {
+                --_lastSelectedRow;
+            }
             break;
             
         case NSFetchedResultsChangeUpdate:
@@ -242,6 +250,18 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
+    
+    if (_lastSelectedRow > -1) {
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:_lastSelectedRow 
+                                                       inSection:0];
+        [self.tableView selectRowAtIndexPath:newIndexPath 
+                                    animated:YES 
+                              scrollPosition:UITableViewScrollPositionNone];
+        
+        self.detailViewController.detailItem = [[self fetchedResultsController] objectAtIndexPath:newIndexPath];
+        _lastSelectedRow = -1;
+    }
+    
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
