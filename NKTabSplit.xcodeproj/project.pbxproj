@@ -112,7 +112,7 @@
 		737B4DB41507C1BB001928AB /* wallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 737B4D4E1507C1BB001928AB /* wallet@2x.png */; };
 		737B4DB51507C1BB001928AB /* widescreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 737B4D4F1507C1BB001928AB /* widescreen.png */; };
 		737B4DB61507C1BB001928AB /* widescreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 737B4D501507C1BB001928AB /* widescreen@2x.png */; };
-		737B4DB81507C26C001928AB /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 737B4DB71507C26C001928AB /* README.markdown */; };
+		737B4DBF1507C4FE001928AB /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 737B4DBE1507C4FE001928AB /* README.markdown */; };
 		73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */; };
 		73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */; };
 		D257B26D1505518F001DBDCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26C1505518F001DBDCB /* UIKit.framework */; };
@@ -252,7 +252,7 @@
 		737B4D4E1507C1BB001928AB /* wallet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet@2x.png"; sourceTree = "<group>"; };
 		737B4D4F1507C1BB001928AB /* widescreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = widescreen.png; sourceTree = "<group>"; };
 		737B4D501507C1BB001928AB /* widescreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "widescreen@2x.png"; sourceTree = "<group>"; };
-		737B4DB71507C26C001928AB /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
+		737B4DBE1507C4FE001928AB /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		D253085B150562E400B1CAAF /* NKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDetailViewController.h; sourceTree = "<group>"; };
 		D253085C150562E400B1CAAF /* NKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDetailViewController.m; sourceTree = "<group>"; };
 		D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~iphone.xib"; sourceTree = "<group>"; };
@@ -480,7 +480,7 @@
 		D257B2731505518F001DBDCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				737B4DB71507C26C001928AB /* README.markdown */,
+				737B4DBE1507C4FE001928AB /* README.markdown */,
 				737B4CE31507A283001928AB /* AppledocSettings.plist */,
 				D257B2741505518F001DBDCB /* NKTabSplit-Info.plist */,
 				D257B2751505518F001DBDCB /* InfoPlist.strings */,
@@ -693,7 +693,7 @@
 				737B4DB41507C1BB001928AB /* wallet@2x.png in Resources */,
 				737B4DB51507C1BB001928AB /* widescreen.png in Resources */,
 				737B4DB61507C1BB001928AB /* widescreen@2x.png in Resources */,
-				737B4DB81507C26C001928AB /* README.markdown in Resources */,
+				737B4DBF1507C4FE001928AB /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
