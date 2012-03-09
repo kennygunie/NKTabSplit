@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		731F6F8B15064646001A82DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731F6F8A15064646001A82DA /* CoreData.framework */; };
 		731F6F8D15064906001A82DA /* NKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D253085C150562E400B1CAAF /* NKDetailViewController.m */; };
+		734E95DC150A1C7300B686A6 /* NKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 734E95DB150A1C7200B686A6 /* NKEvent.m */; };
 		737B4CE41507A283001928AB /* AppledocSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 737B4CE31507A283001928AB /* AppledocSettings.plist */; };
 		737B4DBF1507C4FE001928AB /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 737B4DBE1507C4FE001928AB /* README.markdown */; };
 		738095651508C93C008FCE87 /* add-to-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 738094FF1508C93C008FCE87 /* add-to-cloud.png */; };
@@ -149,6 +150,8 @@
 
 /* Begin PBXFileReference section */
 		731F6F8A15064646001A82DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		734E95DA150A1C7200B686A6 /* NKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKEvent.h; sourceTree = "<group>"; };
+		734E95DB150A1C7200B686A6 /* NKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKEvent.m; sourceTree = "<group>"; };
 		737B4CE31507A283001928AB /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = SOURCE_ROOT; };
 		737B4DBE1507C4FE001928AB /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		738094FF1508C93C008FCE87 /* add-to-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-to-cloud.png"; sourceTree = "<group>"; };
@@ -311,6 +314,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734E95DE150A1C7800B686A6 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				734E95DA150A1C7200B686A6 /* NKEvent.h */,
+				734E95DB150A1C7200B686A6 /* NKEvent.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
 		738094FE1508C93C008FCE87 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +466,7 @@
 		D257B2721505518F001DBDCB /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				734E95DE150A1C7800B686A6 /* Data Model */,
 				D257B27B1505518F001DBDCB /* NKAppDelegate.h */,
 				D257B27C1505518F001DBDCB /* NKAppDelegate.m */,
 				D257B27E1505518F001DBDCB /* NKMasterViewController.h */,
@@ -734,6 +747,7 @@
 				D257B2871505518F001DBDCB /* NKViewController.m in Sources */,
 				731F6F8D15064906001A82DA /* NKDetailViewController.m in Sources */,
 				D2CDF97E1506F1FF00E9326F /* NKData.xcdatamodeld in Sources */,
+				734E95DC150A1C7300B686A6 /* NKEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

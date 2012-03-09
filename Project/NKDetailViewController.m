@@ -7,6 +7,7 @@
 //
 
 #import "NKDetailViewController.h"
+#import "NKEvent.h"
 
 @interface NKDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -50,7 +51,7 @@
 {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.detailDescriptionLabel.text = [[(NKEvent *)self.detailItem timeStamp] description];
     }
     else {
         self.detailDescriptionLabel.text = nil;
