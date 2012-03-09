@@ -21,11 +21,11 @@
 /** Main window */
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 /** Master View A */
-@property (strong, nonatomic) IBOutlet NKMasterViewController *viewControllerA;
+@property (strong, nonatomic) IBOutlet NKMasterViewController *masterViewController;
 /** Detail View A */
-@property (strong, nonatomic) IBOutlet NKDetailViewController *detailViewControllerA;
+@property (strong, nonatomic) IBOutlet NKDetailViewController *detailViewController;
 /** Split View A */
-@property (strong, nonatomic) IBOutlet UISplitViewController *splitViewControllerA;
+@property (strong, nonatomic) IBOutlet UISplitViewController *splitViewController;
 
 /** Tab bar controller */
 @property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;

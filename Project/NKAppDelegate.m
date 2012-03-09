@@ -23,9 +23,9 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-@synthesize viewControllerA = _viewControllerA;
-@synthesize detailViewControllerA = _detailViewControllerA;
-@synthesize splitViewControllerA = _splitViewControllerA;
+@synthesize masterViewController = _masterViewController;
+@synthesize detailViewController = _detailViewController;
+@synthesize splitViewController = _splitViewController;
 
 @synthesize tabBarController = _tabBarController;
 
@@ -35,9 +35,9 @@
     [_managedObjectContext release];
     [_managedObjectModel release];
     [_persistentStoreCoordinator release];
-    [_viewControllerA release];
-    [_detailViewControllerA release];
-    [_splitViewControllerA release];
+    [_masterViewController release];
+    [_detailViewController release];
+    [_splitViewController release];
     [super dealloc];
 }
 
@@ -49,10 +49,10 @@
         // Setup splitview with tabbar
         
         // Tab 1
-        _viewControllerA.detailViewController = _detailViewControllerA;
-        _viewControllerA.fetchedResultsController = [self fetchedResultsController];
-        _viewControllerA.delegate = self;
-        _splitViewControllerA.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A"
+        _masterViewController.detailViewController = _detailViewController;
+        _masterViewController.fetchedResultsController = [self fetchedResultsController];
+        _masterViewController.delegate = self;
+        _splitViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A"
                                                                           image:[UIImage imageNamed:@"airplane.png"] 
                                                                             tag:0] autorelease];
         // Tab 2
@@ -62,7 +62,7 @@
                                                              tag:1] autorelease];
         
         // All tabs
-        self.tabBarController.viewControllers = [NSArray arrayWithObjects:_splitViewControllerA, second, nil];
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:_splitViewController, second, nil];
     }
     
     [self.window makeKeyAndVisible];
