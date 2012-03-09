@@ -51,7 +51,7 @@
 {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[(NKEvent *)self.detailItem timeStamp] description];
+        self.detailDescriptionLabel.text = [[(NKEvent *)self.detailItem title] description];
     }
     else {
         self.detailDescriptionLabel.text = nil;

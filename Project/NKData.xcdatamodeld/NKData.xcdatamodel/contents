@@ -3,7 +3,7 @@
     <entity name="NKEvent" representedClassName="NKEvent" parentEntity="NKMaster" syncable="YES">
         <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="NKMaster" representedClassName="NKMaster" syncable="YES">
+    <entity name="NKMaster" representedClassName="NKMaster" isAbstract="YES" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

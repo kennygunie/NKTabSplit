@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NKMasterViewControllerDelegate.h"
 @class NKMasterViewController;
 @class NKDetailViewController;
 
 
 /** Application delegate */
-@interface NKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface NKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, NKMasterViewControllerDelegate>
 
 
 

@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @class NSFetchedResultsController;
 
 @protocol NKMasterViewControllerDelegate <NSObject>
 
-- (void)insertNewObjectWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
 - (NSFetchedResultsController *)fetchedResultsController;
+- (void)insertNewObjectWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
 
 @end

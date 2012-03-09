@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 @class NKDetailViewController;
-
+@protocol NKMasterViewControllerDelegate;
 /** Master view */
 @interface NKMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
@@ -18,7 +18,9 @@
 @property NSInteger lastSelectedRow;
 /** @name Coredata */
 /** Store the object context from AppDelegate */
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+//@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 /** Fetched datas */
-@property (readonly, strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+@property (assign, nonatomic) id<NKMasterViewControllerDelegate> delegate;
 @end

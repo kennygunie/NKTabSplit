@@ -259,6 +259,7 @@
 		738095641508C93C008FCE87 /* widescreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "widescreen@2x.png"; sourceTree = "<group>"; };
 		73BCAEE3150A5F0600D71998 /* NKMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMaster.h; sourceTree = "<group>"; };
 		73BCAEE4150A5F0600D71998 /* NKMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMaster.m; sourceTree = "<group>"; };
+		73BCAEE7150A60C700D71998 /* NKMasterViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMasterViewControllerDelegate.h; sourceTree = "<group>"; };
 		D253085B150562E400B1CAAF /* NKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDetailViewController.h; sourceTree = "<group>"; };
 		D253085C150562E400B1CAAF /* NKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDetailViewController.m; sourceTree = "<group>"; };
 		D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~iphone.xib"; sourceTree = "<group>"; };
@@ -477,6 +478,7 @@
 				D257B27C1505518F001DBDCB /* NKAppDelegate.m */,
 				D257B27E1505518F001DBDCB /* NKMasterViewController.h */,
 				D257B27F1505518F001DBDCB /* NKMasterViewController.m */,
+				73BCAEE7150A60C700D71998 /* NKMasterViewControllerDelegate.h */,
 				D253085B150562E400B1CAAF /* NKDetailViewController.h */,
 				D253085C150562E400B1CAAF /* NKDetailViewController.m */,
 				D257B2851505518F001DBDCB /* NKViewController.h */,
