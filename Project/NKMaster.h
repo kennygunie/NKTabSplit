@@ -1,5 +1,5 @@
 //
-//  NKEvent.h
+//  NKMaster.h
 //  NKTabSplit
 //
 //  Created by Kien NGUYEN on 09/03/12.
@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "NKMaster.h"
 
 
-@interface NKEvent : NKMaster
+@interface NKMaster : NSManagedObject
 
-@property (nonatomic, retain) NSDate * timeStamp;
+@property (nonatomic, retain) NSString * title;
 
 @end

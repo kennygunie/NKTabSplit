@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="NKEvent" representedClassName="NKEvent" syncable="YES">
+    <entity name="NKEvent" representedClassName="NKEvent" parentEntity="NKMaster" syncable="YES">
         <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="NKMaster" representedClassName="NKMaster" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="NKEvent" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="NKMaster" positionX="171" positionY="27" width="128" height="60"/>
     </elements>
 </model>
