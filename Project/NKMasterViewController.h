@@ -12,15 +12,15 @@
 @protocol NKMasterViewControllerDelegate;
 /** Master view */
 @interface NKMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
 /** (Just for iPad) Detail view controller */
 @property (strong, nonatomic) NKDetailViewController *detailViewController;
+/** Save the last selected row */
 @property NSInteger lastSelectedRow;
+/** Delegate */
+@property (assign, nonatomic) id<NKMasterViewControllerDelegate> delegate;
+
 /** @name Coredata */
-/** Store the object context from AppDelegate */
-//@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 /** Fetched datas */
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-@property (assign, nonatomic) id<NKMasterViewControllerDelegate> delegate;
 @end

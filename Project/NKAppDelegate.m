@@ -256,7 +256,7 @@
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
                                                                     managedObjectContext:self.managedObjectContext 
                                                                       sectionNameKeyPath:nil 
-                                                                               cacheName:@"Master"];
+                                                                               cacheName:@"NKEvent"];
     
 	NSError *error = nil;
 	if (![fetchedResultsController performFetch:&error]) {

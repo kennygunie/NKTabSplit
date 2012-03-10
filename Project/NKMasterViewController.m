@@ -8,7 +8,7 @@
 
 #import "NKMasterViewController.h"
 #import "NKDetailViewController.h"
-#import "NKEvent.h"
+#import "NKMaster.h"
 #import "NKMasterViewControllerDelegate.h"
 
 @interface NKMasterViewController ()
@@ -18,7 +18,6 @@
 @implementation NKMasterViewController
 
 @synthesize fetchedResultsController = _fetchedResultsController;
-//@synthesize managedObjectContext = _managedObjectContext;
 @synthesize detailViewController = _detailViewController;
 @synthesize lastSelectedRow = _lastSelectedRow;
 @synthesize delegate = _delegate;
@@ -26,7 +25,6 @@
 - (void)dealloc
 {
     [_fetchedResultsController release];
-    //[_managedObjectContext release];
     [_detailViewController release];
     [super dealloc];
 }
@@ -63,7 +61,6 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    //self.managedObjectContext = nil;
     self.detailViewController = nil;
     [_fetchedResultsController release];
     _fetchedResultsController = nil;
@@ -221,8 +218,6 @@
     
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:0];
     if([sectionInfo numberOfObjects] > 0) {
-        
-        
         if (_lastSelectedRow > -1) {
             NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:_lastSelectedRow 
                                                            inSection:0];
@@ -241,8 +236,8 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NKEvent *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = event.title;
+    NKMaster *master = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = master.title;
 }
 
 - (void)insertNewObject
