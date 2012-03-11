@@ -16,8 +16,6 @@
 @property (strong, nonatomic) NKDetailViewController *detailViewController;
 /** Save the last selected row */
 @property NSInteger lastSelectedRow;
-/** Delegate */
-@property (assign, nonatomic) id<NKMasterViewControllerDelegate> delegate;
 
 /** @name Coredata */
 /** Fetched datas */

@@ -117,6 +117,7 @@
 		73BCAEE5150A5F0600D71998 /* NKMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BCAEE4150A5F0600D71998 /* NKMaster.m */; };
 		73FA695B15064DE00064B6E4 /* NKDetailViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */; };
 		73FA695C15064DE30064B6E4 /* NKDetailViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */; };
+		D20D0694150C5BD500A798C2 /* NKFirstMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D0692150C5BD500A798C2 /* NKFirstMasterViewController.m */; };
 		D257B26D1505518F001DBDCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26C1505518F001DBDCB /* UIKit.framework */; };
 		D257B26F1505518F001DBDCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B26E1505518F001DBDCB /* Foundation.framework */; };
 		D257B2711505518F001DBDCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B2701505518F001DBDCB /* CoreGraphics.framework */; };
@@ -125,8 +126,8 @@
 		D257B27D1505518F001DBDCB /* NKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B27C1505518F001DBDCB /* NKAppDelegate.m */; };
 		D257B2801505518F001DBDCB /* NKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B27F1505518F001DBDCB /* NKMasterViewController.m */; };
 		D257B2871505518F001DBDCB /* NKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D257B2861505518F001DBDCB /* NKViewController.m */; };
-		D257B28E1505518F001DBDCB /* NKMasterViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */; };
-		D257B2911505518F001DBDCB /* NKMasterViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */; };
+		D257B28E1505518F001DBDCB /* NKFirstMasterViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28C1505518F001DBDCB /* NKFirstMasterViewController~iphone.xib */; };
+		D257B2911505518F001DBDCB /* NKFirstMasterViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B28F1505518F001DBDCB /* NKFirstMasterViewController~ipad.xib */; };
 		D257B2941505518F001DBDCB /* NKViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2921505518F001DBDCB /* NKViewController~iphone.xib */; };
 		D257B2971505518F001DBDCB /* NKViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D257B2951505518F001DBDCB /* NKViewController~ipad.xib */; };
 		D257B29F15055190001DBDCB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257B29E15055190001DBDCB /* SenTestingKit.framework */; };
@@ -259,7 +260,8 @@
 		738095641508C93C008FCE87 /* widescreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "widescreen@2x.png"; sourceTree = "<group>"; };
 		73BCAEE3150A5F0600D71998 /* NKMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMaster.h; sourceTree = "<group>"; };
 		73BCAEE4150A5F0600D71998 /* NKMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMaster.m; sourceTree = "<group>"; };
-		73BCAEE7150A60C700D71998 /* NKMasterViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMasterViewControllerDelegate.h; sourceTree = "<group>"; };
+		D20D0691150C5BD500A798C2 /* NKFirstMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKFirstMasterViewController.h; sourceTree = "<group>"; };
+		D20D0692150C5BD500A798C2 /* NKFirstMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKFirstMasterViewController.m; sourceTree = "<group>"; };
 		D253085B150562E400B1CAAF /* NKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDetailViewController.h; sourceTree = "<group>"; };
 		D253085C150562E400B1CAAF /* NKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDetailViewController.m; sourceTree = "<group>"; };
 		D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NKDetailViewController~iphone.xib"; sourceTree = "<group>"; };
@@ -278,8 +280,8 @@
 		D257B27F1505518F001DBDCB /* NKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKMasterViewController.m; sourceTree = "<group>"; };
 		D257B2851505518F001DBDCB /* NKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKViewController.h; sourceTree = "<group>"; };
 		D257B2861505518F001DBDCB /* NKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKViewController.m; sourceTree = "<group>"; };
-		D257B28D1505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKMasterViewController~iphone.xib"; sourceTree = "<group>"; };
-		D257B2901505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKMasterViewController~ipad.xib"; sourceTree = "<group>"; };
+		D257B28D1505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKFirstMasterViewController~iphone.xib"; sourceTree = "<group>"; };
+		D257B2901505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKFirstMasterViewController~ipad.xib"; sourceTree = "<group>"; };
 		D257B2931505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKViewController~iphone.xib"; sourceTree = "<group>"; };
 		D257B2961505518F001DBDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/NKViewController~ipad.xib"; sourceTree = "<group>"; };
 		D257B29D15055190001DBDCB /* NKTabSplitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKTabSplitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,20 +475,21 @@
 		D257B2721505518F001DBDCB /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				D20D0691150C5BD500A798C2 /* NKFirstMasterViewController.h */,
+				D20D0692150C5BD500A798C2 /* NKFirstMasterViewController.m */,
+				D257B28C1505518F001DBDCB /* NKFirstMasterViewController~iphone.xib */,
+				D257B28F1505518F001DBDCB /* NKFirstMasterViewController~ipad.xib */,
 				734E95DE150A1C7800B686A6 /* Data Model */,
 				D257B27B1505518F001DBDCB /* NKAppDelegate.h */,
 				D257B27C1505518F001DBDCB /* NKAppDelegate.m */,
 				D257B27E1505518F001DBDCB /* NKMasterViewController.h */,
 				D257B27F1505518F001DBDCB /* NKMasterViewController.m */,
-				73BCAEE7150A60C700D71998 /* NKMasterViewControllerDelegate.h */,
 				D253085B150562E400B1CAAF /* NKDetailViewController.h */,
 				D253085C150562E400B1CAAF /* NKDetailViewController.m */,
 				D257B2851505518F001DBDCB /* NKViewController.h */,
 				D257B2861505518F001DBDCB /* NKViewController.m */,
 				D257B2B9150551E2001DBDCB /* MainWindow~iphone.xib */,
 				D257B2BB1505520C001DBDCB /* MainWindow~ipad.xib */,
-				D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */,
-				D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */,
 				D253085F150562E400B1CAAF /* NKDetailViewController~iphone.xib */,
 				D2530860150562E400B1CAAF /* NKDetailViewController~ipad.xib */,
 				D257B2921505518F001DBDCB /* NKViewController~iphone.xib */,
@@ -602,8 +605,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D257B2771505518F001DBDCB /* InfoPlist.strings in Resources */,
-				D257B28E1505518F001DBDCB /* NKMasterViewController~iphone.xib in Resources */,
-				D257B2911505518F001DBDCB /* NKMasterViewController~ipad.xib in Resources */,
+				D257B28E1505518F001DBDCB /* NKFirstMasterViewController~iphone.xib in Resources */,
+				D257B2911505518F001DBDCB /* NKFirstMasterViewController~ipad.xib in Resources */,
 				D257B2941505518F001DBDCB /* NKViewController~iphone.xib in Resources */,
 				D257B2971505518F001DBDCB /* NKViewController~ipad.xib in Resources */,
 				D257B2BA150551E2001DBDCB /* MainWindow~iphone.xib in Resources */,
@@ -756,6 +759,7 @@
 				D2CDF97E1506F1FF00E9326F /* NKData.xcdatamodeld in Sources */,
 				734E95DC150A1C7300B686A6 /* NKEvent.m in Sources */,
 				73BCAEE5150A5F0600D71998 /* NKMaster.m in Sources */,
+				D20D0694150C5BD500A798C2 /* NKFirstMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,20 +790,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D257B28C1505518F001DBDCB /* NKMasterViewController~iphone.xib */ = {
+		D257B28C1505518F001DBDCB /* NKFirstMasterViewController~iphone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D257B28D1505518F001DBDCB /* en */,
 			);
-			name = "NKMasterViewController~iphone.xib";
+			name = "NKFirstMasterViewController~iphone.xib";
 			sourceTree = "<group>";
 		};
-		D257B28F1505518F001DBDCB /* NKMasterViewController~ipad.xib */ = {
+		D257B28F1505518F001DBDCB /* NKFirstMasterViewController~ipad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D257B2901505518F001DBDCB /* en */,
 			);
-			name = "NKMasterViewController~ipad.xib";
+			name = "NKFirstMasterViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
 		D257B2921505518F001DBDCB /* NKViewController~iphone.xib */ = {

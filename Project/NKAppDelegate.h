@@ -7,25 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NKMasterViewControllerDelegate.h"
-@class NKMasterViewController;
+@class NKFirstMasterViewController;
 @class NKDetailViewController;
 
 
 /** Application delegate */
-@interface NKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, NKMasterViewControllerDelegate>
+@interface NKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 
 
 /** @name Views */
 /** Main window */
 @property (strong, nonatomic) IBOutlet UIWindow *window;
+
 /** Master View A */
-@property (strong, nonatomic) IBOutlet NKMasterViewController *masterViewController;
+@property (strong, nonatomic) IBOutlet NKFirstMasterViewController *firstMasterViewController;
 /** Detail View A */
-@property (strong, nonatomic) IBOutlet NKDetailViewController *detailViewController;
+@property (strong, nonatomic) IBOutlet NKDetailViewController *firstDetailViewController;
 /** Split View A */
-@property (strong, nonatomic) IBOutlet UISplitViewController *splitViewController;
+@property (strong, nonatomic) IBOutlet UISplitViewController *firstSplitViewController;
 
 /** Tab bar controller */
 @property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;

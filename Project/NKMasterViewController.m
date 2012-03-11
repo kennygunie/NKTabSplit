@@ -9,7 +9,6 @@
 #import "NKMasterViewController.h"
 #import "NKDetailViewController.h"
 #import "NKMaster.h"
-#import "NKMasterViewControllerDelegate.h"
 
 @interface NKMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -20,7 +19,6 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize detailViewController = _detailViewController;
 @synthesize lastSelectedRow = _lastSelectedRow;
-@synthesize delegate = _delegate;
 #pragma mark - Object lifecycle
 - (void)dealloc
 {
@@ -40,15 +38,15 @@
     }
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
                                                                                 target:self 
                                                                                 action:@selector(insertNewObject)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
+
     
     _fetchedResultsController.delegate = self;
     // Check if fetchedResultsController is empty
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:0];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [_fetchedResultsController.sections objectAtIndex:0];
     if([sectionInfo numberOfObjects] > 0)
     {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 
@@ -62,8 +60,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailViewController = nil;
-    [_fetchedResultsController release];
-    _fetchedResultsController = nil;
+    self.fetchedResultsController = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -80,12 +77,12 @@
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    return [[_fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
@@ -96,7 +93,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                       reuseIdentifier:CellIdentifier] autorelease];
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
@@ -119,8 +117,8 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the managed object for the given index path
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        NSManagedObjectContext *context = [_fetchedResultsController managedObjectContext];
+        [context deleteObject:[_fetchedResultsController objectAtIndexPath:indexPath]];
         
         // Save the context.
         NSError *error = nil;
@@ -160,7 +158,6 @@
 
 #pragma mark - Fetched results controller
     
-
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView beginUpdates];
@@ -195,7 +192,7 @@
             
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             _lastSelectedRow = indexPath.row;
-            id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:0];
+            id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:0];
             if (_lastSelectedRow == [sectionInfo numberOfObjects]) {
                 --_lastSelectedRow;
             }
@@ -216,7 +213,7 @@
 {
     [self.tableView endUpdates];
     
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:0];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [_fetchedResultsController.sections objectAtIndex:0];
     if([sectionInfo numberOfObjects] > 0) {
         if (_lastSelectedRow > -1) {
             NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:_lastSelectedRow 
@@ -236,15 +233,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NKMaster *master = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NKMaster *master = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = master.title;
 }
 
-- (void)insertNewObject
-{
-    if (_delegate) {
-        [_delegate insertNewObjectWithFetchedResultsController:_fetchedResultsController];
-    }
-}
 
 @end

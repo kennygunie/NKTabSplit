@@ -8,7 +8,7 @@
 
 #import "NKAppDelegate.h"
 
-#import "NKMasterViewController.h"
+#import "NKFirstMasterViewController.h"
 #import "NKDetailViewController.h"
 #import "NKViewController.h"
 #import "NKEvent.h"
@@ -23,9 +23,9 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-@synthesize masterViewController = _masterViewController;
-@synthesize detailViewController = _detailViewController;
-@synthesize splitViewController = _splitViewController;
+@synthesize firstMasterViewController = _firstMasterViewController;
+@synthesize firstDetailViewController = _firstDetailViewController;
+@synthesize firstSplitViewController = _firstSplitViewController;
 
 @synthesize tabBarController = _tabBarController;
 
@@ -35,24 +35,22 @@
     [_managedObjectContext release];
     [_managedObjectModel release];
     [_persistentStoreCoordinator release];
-    [_masterViewController release];
-    [_detailViewController release];
-    [_splitViewController release];
+    [_firstMasterViewController release];
+    [_firstDetailViewController release];
+    [_firstSplitViewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //self.viewControllerA.managedObjectContext = [self managedObjectContext];
+    _firstMasterViewController.managedObjectContext = [self managedObjectContext];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         // Setup splitview with tabbar
         
         // Tab 1
-        _masterViewController.detailViewController = _detailViewController;
-        _masterViewController.fetchedResultsController = [self fetchedResultsController];
-        _masterViewController.delegate = self;
-        _splitViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A"
+        _firstMasterViewController.detailViewController = _firstDetailViewController;
+        _firstSplitViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"A"
                                                                           image:[UIImage imageNamed:@"airplane.png"] 
                                                                             tag:0] autorelease];
         // Tab 2
@@ -62,7 +60,7 @@
                                                              tag:1] autorelease];
         
         // All tabs
-        self.tabBarController.viewControllers = [NSArray arrayWithObjects:_splitViewController, second, nil];
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:_firstSplitViewController, second, nil];
     }
     
     [self.window makeKeyAndVisible];
@@ -225,75 +223,4 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    /*
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    */
-    // Set up the fetched results controller.
-    // Create the fetch request for the entity.
-    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"NKEvent" 
-                                              inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO] autorelease];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    //[fetchedResultsController release];
-    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-                                                                    managedObjectContext:self.managedObjectContext 
-                                                                      sectionNameKeyPath:nil 
-                                                                               cacheName:@"NKEvent"];
-    
-	NSError *error = nil;
-	if (![fetchedResultsController performFetch:&error]) {
-	    /*
-	     Replace this implementation with code to handle the error appropriately.
-         
-	     abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-	     */
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
-    
-    return [fetchedResultsController autorelease];
-}
-
-- (void)insertNewObjectWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
-{
-    // Create a new instance of the entity managed by the fetched results controller.
-    NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[fetchedResultsController fetchRequest] entity];
-    //NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    NKEvent *event = [[NKEvent alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    //[newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    event.title = [[NSDate date] description];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    [event release];
-}
 @end
